@@ -16,3 +16,10 @@ A Modern 🚀 Responsive Website Design of Architects Company " Visionary Archit
 
 # Mockup Design 3 👇🏻
 ![mockup3](https://github.com/codeaashu/Visionary-Architects/assets/130897584/87d74852-1363-44cf-a325-b5130fd07745)
+
+
+# Layout Design 👇🏻
+![LayoutVA](https://github.com/codeaashu/Visionary-Architects/assets/130897584/c42809c7-99a6-4fa0-9db6-0671f57309d2)
+
+# Layout Design 👇🏻
+![designVA](https://github.com/codeaashu/Visionary-Architects/assets/130897584/d65317ff-0823-4525-a1fc-d2c880c7f721)
