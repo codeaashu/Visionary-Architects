@@ -17,6 +17,19 @@
     <main class="container-fluid p-0">
         <nav class="container-fluid">
             <div class="container-xl">
+            <!-- Contribution -->
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <img src="images/star.png" class="icon-sun" alt="light">
+                    </div>
+                </label>
+            </div>
+            <div class="scroll-progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+            <!--  -->
                 <a href="index.html" class="logo">
                     <img src="images/logo.png" alt="">
                 </a>
@@ -400,6 +413,39 @@
             
             menuToggle = !menuToggle
         })
+        
+        // Contribution
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'light') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
+
+        // Scroll Progress Indicator Logic
+        window.onscroll = function() { updateScrollProgress() };
+
+        function updateScrollProgress() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    }
     </script>
 </body>
 <!-- ===( Build By : CODE AASHU )=== -->

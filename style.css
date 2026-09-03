@@ -1,4 +1,43 @@
 /* ===( Build By : CODE AASHU )=== */
+
+/* Contribution - Improve Css */
+:root {
+  --bg-color: #15181a;
+  --section-bg: linear-gradient(to right, #1f2327, #35383a);
+  --text-main: #ffffff;
+  --text-secondary: #bfbfbf;
+  --card-bg: linear-gradient(45deg, #34373b, #5a5d60);
+  --accent-color: #ffffff;
+}
+
+/* Light Theme overrides */
+[data-theme="light"] {
+  --bg-color: #f4f4f4;
+  --section-bg: linear-gradient(to right, #e0e0e0, #ffffff);
+  --text-main: #15181a;
+  --text-secondary: #494b4c;
+  --card-bg: linear-gradient(45deg, #ffffff, #dcdcdc);
+  --accent-color: #15181a;
+}
+
+/* Apply variables to existing styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-secondary);
+}
+
+.heading_1, .heading_2, .heading_3 {
+  color: var(--text-main);
+}
+
+section {
+  background: var(--section-bg);
+}
+
+.about .card {
+  background: var(--card-bg);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -552,6 +591,83 @@ footer small {
   margin-top: 2rem;
   opacity: 0.5;
 }
+
+/* Scroll Progress Bar --- Contribution*/
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+}
+
+.progress-bar {
+  height: 4px;
+  background: #ffffff; /* Matches your accent color */
+  width: 0%;
+}
+
+/* Theme Toggle Styling */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 50px;
+}
+
+.theme-switch input { display: none; }
+
+.slider {
+  background-color: #333638;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+  border-radius: 34px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 3px;
+  content: "";
+  height: 16px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 16px;
+  border-radius: 50%;
+}
+
+input:checked + .slider { background-color: #9f9f9f; }
+input:checked + .slider:before { transform: translateX(26px); }
+
+/* Light Theme Variables */
+[data-theme="light"] body {
+  background: #f4f4f4;
+  color: #333;
+}
+
+[data-theme="light"] section {
+  background: linear-gradient(to right, #e0e0e0, #ffffff);
+}
+
+[data-theme="light"] .heading_1, 
+[data-theme="light"] .heading_2, 
+[data-theme="light"] .heading_3 {
+  color: #15181a;
+}
+
 
 /* Page */
 
